@@ -20,8 +20,8 @@ const Header = ({userName}) => {
           <FaRegUserCircle /> <b>Login</b> or<br></br>SignUp
         </button>
        <div className="dropdown-content">
-          <a href="\login">LogIn</a>
-          <a href="\signUp">SignUp</a>
+          <a href="/login">LogIn</a>
+          <a href="/SignUp">SignUp</a>
         </div>
       </div> :<div><p className="email">{userName}</p>  <button className="btn btn-outline-dark">Logout</button> </div>}
       <div className="cart">
