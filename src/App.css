@@ -29,7 +29,7 @@ h1 {
 }
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   border-color: black;
   border-bottom: 2px;
   align-content: center;
