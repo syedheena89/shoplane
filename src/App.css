@@ -93,7 +93,7 @@ h1 {
 }
 .shoppingcart{
   margin-top: 40px;
-  margin-right: 100px;
+  margin-right: 5px;
 }
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown:hover .dropbtn {
@@ -102,6 +102,7 @@ h1 {
 .cart {
   margin-top: 10px;
  margin-left: -100px;
+ 
 }
 
 ul {
