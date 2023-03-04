@@ -105,10 +105,10 @@ const Products = ({ setWishList, wishList }) => {
           return (
             <>
               <div className="col-md-3 mb-4">
-                <div className="card h-100 text-center p-4">
+                <div className="card  text-center p-4">
                   {product.wish ? (
                     <button
-                      id="btn1"
+                      id="favbtn"
                       className="btn"
                       onClick={(e) => {
                         e.preventDefault();
@@ -148,7 +148,7 @@ const Products = ({ setWishList, wishList }) => {
                       <FaStar />
                       {product.rating.rate}({product.rating.count})
                     </p>
-                    <p>this is productwish {product.wish}</p>
+                  
                     <NavLink
                       to={`/products/${product.id}`}
                       className="btn btn-outline-dark"
