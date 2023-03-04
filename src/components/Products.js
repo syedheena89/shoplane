@@ -108,7 +108,7 @@ const Products = ({ setWishList, wishList }) => {
                 <div className="card  text-center p-4">
                   {product.wish ? (
                     <button
-                      id="favbtn"
+                      id="heartedbtn1"
                       className="btn"
                       onClick={(e) => {
                         e.preventDefault();
