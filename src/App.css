@@ -50,7 +50,7 @@ h1 {
   background-color: white;
   margin-bottom: 10px;
   margin-left: -70px;
-  margin-right: 100px;
+  margin-right: 120px;
 }
 
 /* The container <div> - needed to position the dropdown content */
@@ -234,9 +234,7 @@ FaStar {
 .product-detail {
   margin-left: 200px;
 }
-.cart {
-  margin-right: 200px;
-}
+
 .card{
   height :700px;
   width: 400px;
