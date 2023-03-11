@@ -3,12 +3,22 @@ import { useState, useEffect } from "react";
 import { FaShoppingCart, FaStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { addItem } from "../reducers/handleCart";
+import { addItem} from "../reducers/handleCart";
 
-const Products = ({ setWishList, wishList }) => {
+
+
+
+
+
+const Products = ({ setWishList, wishList,cartItems }) => {
   const [data, setData] = useState([]);
   const [filter, setFilter] = useState(data);
   const [loading, setLoading] = useState(false);
+
+
+
+  //const state = useSelector((state) => state.cart);
+ 
 
   const dispatch = useDispatch();
   useEffect(() => {
@@ -28,12 +38,14 @@ const Products = ({ setWishList, wishList }) => {
   };
 
   const filterProduct = (c) => {
+
     const updatedList = data.filter((x) => x.category === c);
     setFilter(updatedList);
     if (c === "favorite") {
-      setFilter(wishList);
+      setFilter(...filter,wishList);
     }
   };
+  
   const markfav = (id) => {
     let newFilter = filter.map((product) => {
       if (product.id === id) {
@@ -48,6 +60,7 @@ const Products = ({ setWishList, wishList }) => {
 
 
   const ShowProducts = () => {
+    
     return (
       <>
         <div className="cat">
@@ -94,14 +107,14 @@ const Products = ({ setWishList, wishList }) => {
           <button
             className="product-cat"
             onClick={() => {
+              filterProduct("favorite");
               setFilter(wishList);
-              // filterProduct("favorite");
             }}
           >
             Favorites
           </button>
         </div>
-        {filter.map((product) => {
+      {filter.map((product) => {
           return (
             <>
               <div className="col-md-3 mb-4">
@@ -160,6 +173,7 @@ const Products = ({ setWishList, wishList }) => {
                       {" "}
                       <FaShoppingCart /> <b>Add to Cart</b>
                     </NavLink>
+                  
                   </div>
                 </div>
               </div>

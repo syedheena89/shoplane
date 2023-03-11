@@ -28,7 +28,7 @@ function App() {
             element={<Login userName={userName} setUserName={setUserName} />}
           />
           <Route path="/*" element={<NotFound />} />
-          <Route path="/success" element={<Products />} />
+          <Route path="/success" element={<Products wishList={wishList} setWishList={setWishList} />} />
           <Route path="/invalidAccess" element={<InvalidAccess />} />
           <Route path="/Signup" element={<SignUp />} />
           <Route path="/cart" element={<Cart />} />

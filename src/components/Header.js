@@ -7,7 +7,6 @@ import { useLocation } from "react-router-dom";
 const Header = ({ userName }) => {
   const state = useSelector((state) => state.cart);
   const location = useLocation();
-  console.log(location);
 
   return (
     <div className="header">
@@ -18,7 +17,9 @@ const Header = ({ userName }) => {
       </div>
 
       <div className="dropmenu">
-        {!userName ? (
+        {location.pathname === "/login" ||
+        location.pathname === "/SignUp" ||
+        location.pathname === "/" ? (
           <div className="dropdown">
             <button className="dropbtn">
               {" "}
@@ -30,8 +31,8 @@ const Header = ({ userName }) => {
             </div>
           </div>
         ) : (
-          <div>
-            <p className="email">{userName}</p>{" "}
+          <div className="details">
+            <p className="email">{userName}</p>
             <NavLink to="/login" className="btn btn-outline-dark">
               Logout
             </NavLink>{" "}

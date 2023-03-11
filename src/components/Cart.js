@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
-import { addItem, deleteItem } from "../reducers/handleCart";
+import { addItem, deleteItem,clearCart } from "../reducers/handleCart";
 
 const Cart = () => {
   const state = useSelector((state) => state.cart);
@@ -17,6 +17,7 @@ const Cart = () => {
   return (
     <>
       <NavLink to="/">Back to Shop</NavLink>
+     
       <div className="order-display">
         <div className="item-list">
           {state.map((product) => (
